@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+header, section .left .tabHeads > button, section .map .scale > div, section .stats > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  background: #222;
+  width: 100%;
+  height: 20vh;
+}
+
+header h1 {
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+header .pulse {
+  background: #d12727;
+  border-radius: 50%;
+  margin: 10px;
+  height: 10px;
+  width: 10px;
+  -webkit-box-shadow: 0 0 0 0 black;
+          box-shadow: 0 0 0 0 black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse-red 2s infinite;
+          animation: pulse-red 2s infinite;
+}
+
+@-webkit-keyframes pulse-red {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+            box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+            box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+.modal-bg {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.781);
+  z-index: 98;
+}
+
+.modal-bg .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20em;
+  height: 10em;
+  background: red;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .left {
+  border: 0.5px solid rgba(255, 255, 255, 0.733);
+  background-color: #222;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+section .left .tabHeads {
+  width: 100%;
+  background: red;
+  height: 1.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .left .tabHeads > button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0.5px solid rgba(0, 0, 0, 0.733);
+}
+
+section .map {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  border: 0.5px solid rgba(255, 255, 255, 0.733);
+  position: relative;
+  background-color: #1b1d25;
+}
+
+section .map .scale {
+  width: 40%;
+  height: 1.2em;
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .map .scale > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: .45rem;
+  color: #d9d9d9;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+section .map .scale :nth-child(1) {
+  background: #ffbaba;
+}
+
+section .map .scale :nth-child(2) {
+  background: #ff7b7b;
+}
+
+section .map .scale :nth-child(3) {
+  background: #ff5252;
+}
+
+section .map .scale :nth-child(4) {
+  background: #ff0000;
+}
+
+section .map .scale :nth-child(5) {
+  background: #a70000;
+}
+
+section .map #geoMap {
+  width: 100%;
+  stroke: #f2f2f2;
+}
+
+section .map #geoMap :nth-child(2) {
+  fill: #ff7b7b;
+}
+
+section .map #geoMap :nth-child(3) {
+  fill: #ff5252;
+}
+
+section .map #geoMap :nth-child(4) {
+  fill: #ff0000;
+}
+
+section .map #geoMap :nth-child(5) {
+  fill: #a70000;
+}
+
+section .map #geoMap :nth-child(6) {
+  fill: #ff7b7b;
+}
+
+section .map #geoMap :nth-child(7) {
+  fill: #ff5252;
+}
+
+section .map #geoMap :nth-child(8) {
+  fill: #ff0000;
+}
+
+section .map #geoMap :nth-child(9) {
+  fill: #a70000;
+}
+
+section .map #geoMap :nth-child(10) {
+  fill: #ff0000;
+}
+
+section .map #geoMap :nth-child(11) {
+  fill: #a70000;
+}
+
+section .map #geoMap path {
+  cursor: pointer;
+}
+
+section .map #geoMap path:hover {
+  fill: #6d6d6d;
+}
+
+section .stats {
+  border: 0.5px solid rgba(255, 255, 255, 0.733);
+  background: #222;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .stats > div {
+  border: 0.5px solid rgba(255, 255, 255, 0.733);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+section .stats > div span {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+section .stats #death {
+  color: red;
+}
+
+section .stats #vaccine {
+  color: #00c200;
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .map {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  section .stats {
+    height: 100px;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  section .left {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+footer {
+  background: #222;
+  width: 100%;
+  height: 10vh;
+  border: 1px solid #fff;
+}
+/*# sourceMappingURL=style.css.map */
