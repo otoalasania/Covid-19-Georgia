@@ -1,0 +1,82 @@
+{
+    "Georgia": [
+        {
+            "FullVaccined": 2010783
+        },
+        {
+            "HalfVaccined": 954991
+        },
+        {
+            "stateNum": 1,
+            "stateName": "Abkhazia",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 2,
+            "stateName": "Ajaria",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 3,
+            "stateName": "Guria",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 4,
+            "stateName": "Samegrelo-Zemo Svaneti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 5,
+            "stateName": "Imereti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 6,
+            "stateName": "Kakheti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 7,
+            "stateName": "Mtskheta-Mtianeti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 8,
+            "stateName": "Racha-Lechkhumi-Kvemo Svaneti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 9,
+            "stateName": "Tbilisi",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 10,
+            "stateName": "Kvemo Kartli",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 11,
+            "stateName": "Samtskhe-Javakheti",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        },
+        {
+            "stateNum": 12,
+            "stateName": "Shida Kartli",
+            "totalCases": 1000,
+            "totalDeaths": 2000
+        }
+    ]
+}
