@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-header, section .left .tabHeads > button, section .left .tabcontent ol li h3, section .map .scale > div, section .stats > div {
+header, section .left .tabHeads > button, section .left .tabcontent ol li h3, section .map, section .map .scale > div, section .stats > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ header .pulse, section .left .tabcontent ol li .pulse {
 }
 
 header {
-  background: #222;
+  background: #0f0f0f;
   width: 100%;
   height: 20vh;
   display: -webkit-box;
@@ -50,10 +50,10 @@ header {
 }
 
 header h1 {
-  color: #f2f2f2;
+  color: #a5a5a5;
   font-weight: 600;
   font-size: 2.7rem;
-  background: #680000;
+  border: 1px solid #ff6384;
   padding: 0.2em;
 }
 
@@ -61,12 +61,6 @@ header h1 {
   header h1 {
     font-size: 1.7rem;
   }
-}
-
-header marquee {
-  background: #000000;
-  color: #fff;
-  font-size: 1.2rem;
 }
 
 @-webkit-keyframes pulse-red {
@@ -111,36 +105,19 @@ header marquee {
   }
 }
 
-.modal-bg {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.781);
-  z-index: 98;
-}
-
-.modal-bg .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 20em;
-  height: 10em;
-  background: red;
-}
-
 section {
   width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.466);
+  border-top: 1px solid rgba(88, 88, 88, 0.445);
 }
 
 section .left {
-  background: #002424;
+  background: #0f0f0f;
+  border-top: 1px solid rgba(88, 88, 88, 0.308);
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -148,7 +125,6 @@ section .left {
 
 section .left .tabHeads {
   width: 100%;
-  background: red;
   height: 2.4em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,13 +135,14 @@ section .left .tabHeads > button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background: #222;
-  color: #fff;
+  background: #2c2121;
+  border: 1px solid #8a3749;
+  color: #bdbdbd;
   cursor: pointer;
 }
 
-section .left .tabHeads button.active {
-  background-color: #641414;
+section .left .tabHeads > button:hover {
+  background: #0c0c0c;
 }
 
 section .left #firstTab {
@@ -176,7 +153,7 @@ section .left .tabcontent ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #00441c;
+  border: 1px solid rgba(88, 88, 88, 0.308);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -185,16 +162,21 @@ section .left .tabcontent ol li {
           align-items: center;
   height: 2.5em;
   padding: 0 1em;
-  color: #fff;
+  color: #b1b1b1;
 }
 
 section .map {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
   position: relative;
   background-color: black;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0;
 }
 
 section .map .slider {
@@ -213,17 +195,18 @@ section .map .slider {
   -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
   display: flex;
+  z-index: 2;
 }
 
 section .map .slider i {
   font-size: 1.3rem;
   color: #fff;
-  padding: 5em 0.2em;
+  padding: 2em 0.2em;
   cursor: pointer;
-  background: rgba(73, 0, 0, 0.582);
-  width: 1.5em;
+  background: rgba(39, 39, 39, 0.582);
+  width: 1.3em;
   position: absolute;
-  left: -1.4em;
+  left: -1.3em;
   border-radius: 8px 0 0 8px;
   text-align: center;
 }
@@ -250,12 +233,16 @@ section .map .slideLeft {
 }
 
 section .map .scale {
-  width: 40%;
+  width: 45%;
   height: 1.7em;
   background: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #d34866;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 @media screen and (max-width: 500px) {
@@ -270,7 +257,7 @@ section .map .scale > div {
       -ms-flex: 1;
           flex: 1;
   font-size: .7rem;
-  color: #d9d9d9;
+  color: #adadad;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -281,68 +268,28 @@ section .map .scale > div {
 }
 
 section .map .scale :nth-child(1) {
-  background: #ffbaba;
+  background: #800020;
 }
 
 section .map .scale :nth-child(2) {
-  background: #ff7b7b;
+  background: #66001a;
 }
 
 section .map .scale :nth-child(3) {
-  background: #ff5252;
+  background: #4d0013;
 }
 
 section .map .scale :nth-child(4) {
-  background: #ff0000;
+  background: #33000d;
 }
 
 section .map .scale :nth-child(5) {
-  background: #a70000;
+  background: #1a0006;
 }
 
 section .map #geoMap {
-  width: 100%;
-  stroke: #f2f2f2;
-}
-
-section .map #geoMap :nth-child(2) {
-  fill: #ff7b7b;
-}
-
-section .map #geoMap :nth-child(3) {
-  fill: #ff5252;
-}
-
-section .map #geoMap :nth-child(4) {
-  fill: #ff0000;
-}
-
-section .map #geoMap :nth-child(5) {
-  fill: #a70000;
-}
-
-section .map #geoMap :nth-child(6) {
-  fill: #ff7b7b;
-}
-
-section .map #geoMap :nth-child(7) {
-  fill: #ff5252;
-}
-
-section .map #geoMap :nth-child(8) {
-  fill: #ff0000;
-}
-
-section .map #geoMap :nth-child(9) {
-  fill: #a70000;
-}
-
-section .map #geoMap :nth-child(10) {
-  fill: #ff0000;
-}
-
-section .map #geoMap :nth-child(11) {
-  fill: #a70000;
+  width: 90%;
+  stroke: #ffc7d3;
 }
 
 section .map #geoMap path {
@@ -354,8 +301,6 @@ section .map #geoMap path:hover {
 }
 
 section .stats {
-  background: #202400;
-  background: #222;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -369,12 +314,13 @@ section .stats {
 }
 
 section .stats > div {
-  background: #2e003a;
+  background: #0f0f0f;
+  border-bottom: 1px solid rgba(88, 88, 88, 0.308);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  color: #f2f2f2;
+  color: #bbbbbb;
   font-size: .9rem;
   font-weight: 600;
 }
@@ -384,12 +330,19 @@ section .stats > div span {
   font-weight: 800;
 }
 
+section .stats #cases {
+  color: #535353;
+  -webkit-text-stroke: 1px #dbdbdb;
+}
+
 section .stats #death {
-  color: red;
+  color: #571414;
+  -webkit-text-stroke: 1px #ff6384;
 }
 
 section .stats .vaccine {
-  color: #00c200;
+  color: #145730;
+  -webkit-text-stroke: 1px #4acf7d;
 }
 
 @media screen and (max-width: 800px) {
@@ -423,8 +376,8 @@ section .stats .vaccine {
 }
 
 footer {
-  background: #222;
+  background: #0f0f0f;
   width: 100%;
-  height: 10vh;
+  height: 30vh;
 }
 /*# sourceMappingURL=style.css.map */

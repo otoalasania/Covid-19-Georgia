@@ -1,14 +1,3 @@
-// let modala = document.querySelectorAll(".paths");
-
-// for (let i = 0; i < modala.length; i++) {
-//     //document.querySelector(".modal").style.display = "block";
-//     //document.querySelector(".modal").classList.add("modala");
-//     modala.addEventListenerAll("click", function () {
-//         console.log('sdfsdfs');
-//     });
-// }
-
-
 
 const slideLeft = document.querySelector(".fa-chevron-left");
 const slider = document.querySelector(".slider");
@@ -37,7 +26,35 @@ fetch("./states.json")
     })
     .then(function (data) {
         document.getElementById("fullVaccine").innerHTML = data.Georgia[0].FullVaccined;
-        document.getElementById("halfVaccine").innerHTML = data.Georgia[1].HalfVaccined
+        document.getElementById("halfVaccine").innerHTML = data.Georgia[1].HalfVaccined;
+        // let adjara = data.Georgia[3].totalCases;
+        // let guria = data.Georgia[4].totalCases;
+        // let samegrelo = data.Georgia[5].totalCases;
+        // let imereti = data.Georgia[6].totalCases;
+        // let kakheti = data.Georgia[7].totalCases;
+        // let mtianeti = data.Georgia[8].totalCases;
+        // let Racha = data.Georgia[9].totalCases;
+        // let tbilisi = data.Georgia[10].totalCases;
+        // let kvemo = data.Georgia[11].totalCases;
+        // let javakheti = data.Georgia[12].totalCases;
+        // let shida = data.Georgia[13].totalCases;
+        for (let i = 0; i < 14; i++) {
+            if (data.Georgia[i].totalCases <= 1000) {
+                document.getElementById("GE" + i).style.fill = "#800020";
+            }
+            else if (data.Georgia[i].totalCases > 1000 && data.Georgia[i].totalCases <= 2500) {
+                document.getElementById("GE" + i).style.fill = "#66001a";
+            }
+            else if (data.Georgia[i].totalCases > 2500 && data.Georgia[i].totalCases <= 5000) {
+                document.getElementById("GE" + i).style.fill = "#4d0013";
+            }
+            else if (data.Georgia[i].totalCases > 5000 && data.Georgia[i].totalCases <= 10000) {
+                document.getElementById("GE" + i).style.fill = "#33000d";
+            }
+            else if (data.Georgia[i].totalCases >= 10000) {
+                document.getElementById("GE" + i).style.fill = "#1a0006";
+            }
+        }
     })
 
 
@@ -47,7 +64,7 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['June', 'July', 'August', 'September', 'Octomber', 'November'],
         datasets: [{
-            label: '# of Votes',
+            label: 'Month Statistic',
             data: [10000, 19945, 21555, 27985, 34445, 37058],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -65,14 +82,23 @@ const myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
         }]
     },
     options: {
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                grid: {
+                    color: ' rgba(88, 88, 88, 0.308)'
+                }
+            },
+            x: {
+                grid: {
+                    color: ' rgba(88, 88, 88, 0.308)'
+                }
             }
+
         }
     }
 });

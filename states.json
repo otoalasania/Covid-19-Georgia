@@ -21,61 +21,61 @@
         {
             "stateNum": 3,
             "stateName": "Guria",
-            "totalCases": 1000,
+            "totalCases": 3000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 4,
             "stateName": "Samegrelo-Zemo Svaneti",
-            "totalCases": 1000,
+            "totalCases": 4000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 5,
             "stateName": "Imereti",
-            "totalCases": 1000,
+            "totalCases": 6000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 6,
             "stateName": "Kakheti",
-            "totalCases": 1000,
+            "totalCases": 8000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 7,
             "stateName": "Mtskheta-Mtianeti",
-            "totalCases": 1000,
+            "totalCases": 2000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 8,
             "stateName": "Racha-Lechkhumi-Kvemo Svaneti",
-            "totalCases": 1000,
+            "totalCases": 5000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 9,
             "stateName": "Tbilisi",
-            "totalCases": 1000,
+            "totalCases": 7000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 10,
             "stateName": "Kvemo Kartli",
-            "totalCases": 1000,
+            "totalCases": 5000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 11,
             "stateName": "Samtskhe-Javakheti",
-            "totalCases": 1000,
+            "totalCases": 6000,
             "totalDeaths": 2000
         },
         {
             "stateNum": 12,
             "stateName": "Shida Kartli",
-            "totalCases": 1000,
+            "totalCases": 9000,
             "totalDeaths": 2000
         }
     ]
